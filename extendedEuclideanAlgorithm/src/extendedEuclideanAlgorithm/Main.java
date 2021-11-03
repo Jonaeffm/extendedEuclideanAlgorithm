@@ -1,5 +1,6 @@
 package extendedEuclideanAlgorithm;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -22,7 +23,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int a,b;
-		
+		Lines = new ArrayList<>();
 		System.out.println("Hello World!");
 		Scanner reader = new Scanner(System.in);  // Reading from System.in
 		a = reader.nextInt(); // Scans the next token of the input as an int.
