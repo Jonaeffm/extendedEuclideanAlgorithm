@@ -19,6 +19,14 @@ public class Main {
 		System.out.println("Q="+l.getQ()+" R="+l.getR());
 		return l;
 	}
+	public static Line createLine(Line l, Line m)
+	{
+		
+		m.setA(l.getB());
+		m.setB(l.getR());
+		return m;
+		
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -41,8 +49,21 @@ public class Main {
 		Line l = new Line();
 		l.setA(a);
 		l.setB(b);
-		l=computeLine(l);
+		Line m;
+		while(true)
+		{
+			if(l.getB()==0)
+				break;
+			
+			l=computeLine(l);
+		
 		Lines.add(l);
+		m = new Line();
+		m=createLine(l,m);
+		
+		l=m;
+		
+		}
 	}
 
 }
