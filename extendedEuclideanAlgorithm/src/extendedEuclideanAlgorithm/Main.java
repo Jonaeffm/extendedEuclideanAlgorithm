@@ -1,5 +1,6 @@
 package extendedEuclideanAlgorithm;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,8 +11,17 @@ public class Main {
 	
 	public static  Line computeLine(Line l)
 	{
-		int c = l.getA()/l.getB();
-		int d=c;
+		NumberFormat nf = NumberFormat.getInstance();
+		nf.setMinimumFractionDigits(0);
+		nf.setMaximumFractionDigits(0);
+		double c = l.getA()/l.getB();
+		String e=nf.format(c);
+		Double f = new Double(e);
+		double d = f.doubleValue();
+		
+		if(l.getA()%l.getB()/l.getB()>0.5)
+			d=d-1;
+		
 		l.setQ(d);
 		c=l.getA()%l.getB();
 		l.setR(c);
@@ -30,19 +40,19 @@ public class Main {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a,b;
+		double a,b;
 		Lines = new ArrayList<>();
 		System.out.println("first int:");
 		Scanner reader = new Scanner(System.in);  // Reading from System.in
-		a = reader.nextInt(); // Scans the next token of the input as an int.
+		a = reader.nextDouble(); // Scans the next token of the input as an int.
 		System.out.println("second int:");
-		b = reader.nextInt(); 
+		b = reader.nextDouble(); 
 		//once finished
 		reader.close();
 		System.out.println("a:"+a+" b:"+b);
 		if (a<b)
 		{	
-			int c =  b;
+			double c =  b;
 			b=a;
 			a=c;
 			System.out.println("getaischt: a:"+a+" b:"+b);
