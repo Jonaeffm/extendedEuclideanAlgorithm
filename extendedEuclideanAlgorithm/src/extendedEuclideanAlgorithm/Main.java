@@ -64,6 +64,25 @@ public class Main {
 		l=m;
 		
 		}
+		
+		Line n = Lines.get(Lines.size()-1);
+		
+		n.setX(0);
+		n.setY(1);
+		Lines.remove(Lines.size()-1);
+		Lines.add(n);
+		
+		for(int i=Lines.size()-2;i>(-1);i--)
+		{
+			Line o = Lines.get(i);
+			Line p = Lines.get(i+1);
+			o.setX(p.getY());
+			o.setY(p.getX()-o.getQ()*o.getX());
+			System.out.println("Line "+i);
+			System.out.println("X= "+o.getX()+" Y="+o.getY());
+			System.out.println();
+		}
+		
 	}
 
 }
