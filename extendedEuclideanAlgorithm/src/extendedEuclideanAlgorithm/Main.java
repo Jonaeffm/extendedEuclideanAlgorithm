@@ -32,9 +32,10 @@ public class Main {
 		// TODO Auto-generated method stub
 		int a,b;
 		Lines = new ArrayList<>();
-		System.out.println("Hello World!");
+		System.out.println("first int:");
 		Scanner reader = new Scanner(System.in);  // Reading from System.in
 		a = reader.nextInt(); // Scans the next token of the input as an int.
+		System.out.println("second int:");
 		b = reader.nextInt(); 
 		//once finished
 		reader.close();
