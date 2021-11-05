@@ -19,7 +19,7 @@ public class Main {
 		Double f = new Double(e);
 		double d = f.doubleValue();
 		
-		if(l.getA()%l.getB()/l.getB()>0.5)
+		if(l.getA()%l.getB()/l.getB()>=0.5)
 			d=d-1;
 		
 		l.setQ(d);
