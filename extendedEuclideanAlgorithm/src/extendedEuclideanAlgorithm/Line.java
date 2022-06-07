@@ -2,46 +2,46 @@ package extendedEuclideanAlgorithm;
 
 public class Line {
 
-	private double a;
-	private double b;
-	private double q;
-	private double r;
-	private double x;
-	private double y;
-	public double getA() {
+	private long a;
+	private long b;
+	private long q;
+	private long r;
+	private long x;
+	private long y;
+	public long getA() {
 		return a;
 	}
-	public void setA(double a) {
+	public void setA(long a) {
 		this.a = a;
 	}
-	public double getB() {
+	public long getB() {
 		return b;
 	}
-	public void setB(double b) {
+	public void setB(long b) {
 		this.b = b;
 	}
-	public double getQ() {
+	public long getQ() {
 		return q;
 	}
-	public void setQ(double q) {
+	public void setQ(long q) {
 		this.q = q;
 	}
-	public double getR() {
+	public long getR() {
 		return r;
 	}
-	public void setR(double r) {
+	public void setR(long r) {
 		this.r = r;
 	}
-	public double getX() {
+	public long getX() {
 		return x;
 	}
-	public void setX(double x) {
+	public void setX(long x) {
 		this.x = x;
 	}
-	public double getY() {
+	public long getY() {
 		return y;
 	}
-	public void setY(double y) {
+	public void setY(long y) {
 		this.y = y;
 	}
 	

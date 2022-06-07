@@ -11,16 +11,16 @@ public class Main {
 	
 	public static  Line computeLine(Line l)
 	{
-		NumberFormat nf = NumberFormat.getInstance();
+		/*NumberFormat nf = NumberFormat.getInstance();
 		nf.setMinimumFractionDigits(0);
-		nf.setMaximumFractionDigits(0);
-		double c = l.getA()/l.getB();
-		String e=nf.format(c);
-		Double f = new Double(e);
-		double d = f.doubleValue();
+		nf.setMaximumFractionDigits(0);*/
+		long c = l.getA()/l.getB();
+		//String e=c;
+		long f = c;
+		long d=f;
 		
-		if(l.getA()%l.getB()/l.getB()>=0.5)
-			d=d-1;
+		/*if(l.getA()%l.getB()/l.getB()>=0.5)
+			d=d-1;*/
 		
 		l.setQ(d);
 		c=l.getA()%l.getB();
@@ -40,19 +40,19 @@ public class Main {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		double a,b;
+		long a,b;
 		Lines = new ArrayList<>();
 		System.out.println("first int:");
 		Scanner reader = new Scanner(System.in);  // Reading from System.in
-		a = reader.nextDouble(); // Scans the next token of the input as an int.
+		a = reader.nextLong(); // Scans the next token of the input as an int.
 		System.out.println("second int:");
-		b = reader.nextDouble(); 
+		b = reader.nextLong(); 
 		//once finished
 		reader.close();
 		System.out.println("a:"+a+" b:"+b);
 		if (a<b)
 		{	
-			double c =  b;
+			long c =  b;
 			b=a;
 			a=c;
 			System.out.println("getaischt: a:"+a+" b:"+b);
